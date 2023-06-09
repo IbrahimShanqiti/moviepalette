@@ -1,0 +1,21 @@
+body {
+    background-color: rgb(76, 122, 171);
+    font-family: 'Open Sans', sans-serif;
+  }
+  h1 {
+    color: rgb(255, 255, 255);
+  }
+  p {
+    color: rgb(255, 255, 255);
+  }
+  .center {
+    text-align: center;
+  }
+  .center1 {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }

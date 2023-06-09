@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<head>
+    <title> Preview </title>
+</head>
+
+<body>
+    
+    <img src="{{url_for('static', filename=video_name)}}" alt="Your final image.">
+
+
+    <a href="{{url_for('static', filename=video_name)}}" download="GFG">
+        <button type="button">Download</button>
+    </a>
+
+</body>
+
+</html>
