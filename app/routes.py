@@ -7,15 +7,13 @@ from app import app, STATIC_DIR
 def index():
     return render_template('index.html')
 
-@app.route('/upload', methods=['POST'])
+@app.route('/upload', methods=['POST', 'GET'])
 def upload():
     try: 
         video = load_video(request.files)
-        video.save(STATIC_DIR + video.filename)
-        build_palette(STATIC_DIR + video.filename, 400)
+        video.save(STATIC_DIR + '/' + video.filename)
+        build_palette(STATIC_DIR + '/' + video.filename, 400)
         return render_template('preview.html', video_name = 'final.png')
     
     except Exception as e: 
-        return e.message()
-
-     
+        return str(e)
